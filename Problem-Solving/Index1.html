@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions</title>
+    <link rel="stylesheet" href="assign2.css">
+    <script src="problems.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center bg-secondary">Solving problems</h1>
+    <nav class="navbar navbar-expand-lg bg-info my-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Calculator</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Number</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+               <h3>Find if a number is in range</h3>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+                <div class="form-group my-5 ">
+                   <p> <strong>Enter a number in a input box to check if it is in a range.</strong></p>
+                    <label for="q1_input ">Input: </label>
+                    <input type="number" name="form-control" id="q1_input" onchange="getChoice()" required>
+                </div>
+                <div class="form-group">
+                    <label for="q1_output">Output: </label>
+                    <textarea name="form-group" id="q1_output"  cols="20" rows="1" readonly></textarea>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              <h3>Find premiter and Area</h3>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <div class="form-group my-5">
+                    <p><strong>Enter a side of square to find it's perimeter and area</strong></p>
+                    <label for="g1q3_input">Input: </label>
+                    <input type="number" name="form-control" id="g1q3_input" onchange="perimAndSquare()" required>
+                </div>
+                <div class="form-group">
+                    <label for="g1q3_output text-center">Output: </label>
+                    <textarea name="form-group" id="g1q3_output" rows="2"  readonly></textarea>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              <h3>Check if a letter is vowel</h3>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <div class="form-group my-2">
+                    <p><strong>Enter a letter to check if it is a vowel.</strong></p>
+                    <label for="g2q1_input">Letter:</label>
+                    <input type="text" name="g2q1_input" min="0" max="1" id="g2q1_input" class="form-control" onchange="checkVowel()">
+          
+                    <label for="g2q1_output" class="my-5">Result: </label>
+                    <textarea name="form-group" id="g2q1_output"  readonly></textarea>
+                </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        <a class="btn btn-primary my-5" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Find factorial</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Solve a equation</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body bg-dark-subtle">
+                <div class="my-2">
+                    <p><strong>Enter a number to find factorial.</strong></p>
+                    <label for="g2q3_input ">Number: </label>
+                    <input type="number" name="g2q3_input" id="g2q3_input" onchange="findFactorial()">
+                  </div>
+                  <div>
+                    <label for="g2q3_output">Factorial</label>
+                    <textarea name="g2q3_output" id="g2q3_output" cols="30" rows="1" readonly></textarea>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body bg-dark-subtle">
+                <div>
+                    <div class="my-2">
+                        <p><strong>Enter a equation to get it's value.</strong></p>
+                        <label for="g3q1i_input1">Equation:</label>
+                        <input onchange="solveEquation()" type="text" name="g3q1_input1" id="g3q1_input1">
+                    </div>
+                    
+                    <div>
+                        <label for="g3q1_output">Solution:</label>
+                        <textarea name="g3q1_output" id="g3q1_output" cols="30" rows="1"></textarea>
+                    </div>
+                   </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        &copy; Bikash Shiwakoti 000891600 Mohawk College
+      </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
